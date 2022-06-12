@@ -1,11 +1,7 @@
 import styled from "styled-components";
+import { PokemonListItems } from "../content/pokemonListItem.interface";
 
-type PokemonItemData = {
-  imageHref: string;
-  title: string;
-};
-
-export const PokemonItem = ({ imageHref, title }: PokemonItemData) => {
+export const PokemonItem = ({ url, name }: PokemonListItems) => {
   const Title = styled.h1`
     font-size: 1.5em;
     text-align: center;
@@ -17,8 +13,8 @@ export const PokemonItem = ({ imageHref, title }: PokemonItemData) => {
   `;
   return (
     <Box>
-      <img src={imageHref} alt="pokemon" />
-      <Title>{title}</Title>
+      {/* <img src={url} alt="pokemon" /> */}
+      <Title>{name}</Title>
     </Box>
   );
 };
