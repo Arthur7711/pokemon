@@ -4,8 +4,9 @@ import { PokemonListItems } from "../content/pokemonListItem.interface";
 
 export const PokemonItem = ({ url, name }: PokemonListItems) => {
   const navigate = useNavigate();
+
   function clickNav(): void {
-    navigate(`/${name}`);
+    navigate(`/pokemon/${name}`);
   }
 
   const Title = styled.h1`
