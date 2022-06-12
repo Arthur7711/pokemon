@@ -37,6 +37,7 @@ export const Home = () => {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
   `;
   return (
     <Pokemons>
