@@ -1,33 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-
-interface PakemonDetails {
-  species: { name: string; url: string };
-  stats: [
-    {
-      base_stat: number;
-      stat: { name: string; url: string };
-    }
-  ];
-  types: [{ type: { name: string; url: string } }];
-  weight: number;
-  moves: [
-    {
-      move: [{ name: string; url: string }];
-      version_group_details: [
-        {
-          move_learn_method: { name: string; url: string };
-          version_group: { name: string; url: string };
-        }
-      ];
-    }
-  ];
-}
+import { PokemonDetails } from "../../content/pokemonDetails.interface";
 
 export const Details = () => {
   const { id } = useParams();
-  const [selectedItem, setSelectedItem] = useState<PakemonDetails>();
+  const [selectedItem, setSelectedItem] = useState<PokemonDetails>();
 
   useEffect(() => {
     (async function () {
